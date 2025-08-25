@@ -1,0 +1,30 @@
+<div class="average-rating">
+  <b>Average Rating:</b> {{ averageRating }} / 5
+</div>
+
+<mat-form-field>
+  <mat-label>Filter by Genre</mat-label>
+  <mat-select [(value)]="selectedGenre">
+    <mat-option value="">All</mat-option>
+    <mat-option *ngFor="let genre of genres" [value]="genre">{{ genre }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-grid-list cols="3" rowHeight="390px" gutterSize="16px" class="movie-grid">
+  <mat-grid-tile *ngFor="let movie of filteredMovies">
+    <mat-card [ngClass]="{ 'top-rated': movie.rating === 5 }">
+      <!-- Bind to movie.posterUrl -->
+      <img mat-card-image [src]="movie.posterUrl" alt="Movie Poster" />
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
+      <mat-card-content>
+        {{ movie.description }}
+      </mat-card-content>
+      <div class="movie-rating">
+        <mat-icon *ngFor="let i of [1,2,3,4,5]">
+          {{ i <= movie.rating ? 'star' : 'star_border' }}
+        </mat-icon>
+      </div>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

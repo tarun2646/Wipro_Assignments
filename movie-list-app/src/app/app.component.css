@@ -1,0 +1,66 @@
+.average-rating {
+  margin: 16px 0;
+}
+
+mat-form-field {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.movie-grid {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.top-rated {
+  border: 2px solid gold;
+  box-shadow: 0 2px 8px 0 #ffd70060;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mat-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.movie-rating mat-icon {
+  color: #ffc107;
+}
+
+@media (max-width: 900px) {
+  mat-grid-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  mat-grid-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Make movie posters smaller and uniform */
+mat-card img,
+.mat-card-image {
+  width: 120px;
+  height: 160px;
+  object-fit: cover; /* Keeps aspect ratio, fills the area, crops overflow */
+  margin: 12px auto 8px auto;
+  display: block;
+}
+
+.small-poster {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  margin: 8px auto;
+}

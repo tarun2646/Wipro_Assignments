@@ -1,0 +1,17 @@
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 24px 24px 16px 24px;
+}
+
+.thank-you {
+  color: #00ae4d;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}

@@ -1,0 +1,110 @@
+
+
+
+
+.add {
+  display: flex;
+  gap: .5rem;
+  input {
+    flex: 1;
+    padding: .75rem .9rem;
+    border: 1px solid #ddd;
+    border-radius: .6rem;
+    font-size: 1rem;
+  }
+  button {
+    padding: .75rem 1rem;
+    border: none;
+    border-radius: .6rem;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.5rem;
+
+  .filters {
+    display: flex;
+    gap: .5rem;
+    button {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: .4rem .75rem;
+      border-radius: .5rem;
+      cursor: pointer;
+      &.active { border-color: #111; }
+    }
+  }
+  .counts {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    .link {
+      background: transparent;
+      border: none;
+      color: #555;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: .5rem 0 0;
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .75rem;
+    align-items: center;
+    padding: .75rem;
+    border: 1px solid #eee;
+    border-radius: .75rem;
+    margin-bottom: .5rem;
+
+    &.done span { text-decoration: line-through; color: #888; }
+
+    label {
+      display: flex; gap: .65rem; align-items: center;
+      input[type="checkbox"] { transform: scale(1.2); }
+      span { user-select: none; }
+    }
+
+    .actions {
+      display: flex; gap: .5rem;
+      button {
+        border: 1px solid #ddd;
+        background: #fff;
+        padding: .4rem .7rem;
+        border-radius: .5rem;
+        cursor: pointer;
+      }
+      .danger { border-color: #f2c; color: #c03; }
+    }
+
+    form.edit {
+      grid-column: 1 / -1;
+      display: flex; gap: .5rem;
+      input {
+        flex: 1; padding: .6rem .8rem; border: 1px solid #ddd; border-radius: .5rem;
+      }
+      button {
+        border: 1px solid #ddd; background: #fff; padding: .5rem .9rem; border-radius: .5rem;
+      }
+      .ghost { opacity: .7; }
+    }
+  }
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 2rem;
+}

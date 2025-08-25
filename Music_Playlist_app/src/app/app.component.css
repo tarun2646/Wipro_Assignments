@@ -1,0 +1,23 @@
+.song-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+mat-card {
+  width: 300px;
+  margin-bottom: 16px;
+}
+.top-rated {
+  border: 2px solid #ffca28;
+  box-shadow: 0 4px 20px #ffe08280;
+}
+.song-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
